@@ -32,13 +32,13 @@ const TimelineItem = ({ year, title, subtitle, description, isLeft }) => {
 export default function Experience() {
   const experiences = [
     {
-      year: "2024 - Present",
-      title: "Senior Full-Stack Intern",
+      year: "2026 - Present",
+      title: "UnderGrad Student",
       subtitle: "Tech Innovators Inc.",
       description: "Developed and optimized microservices in Python and Node.js. Built scalable React frontends, improving loading times by 40% and user engagement significantly."
     },
     {
-      year: "2022 - 2024",
+      year: "2024 - 2028",
       title: "Computer Science Degree",
       subtitle: "University of Technology",
       description: "Focusing on Software Engineering, Data Structures, Algorithms, and UI/UX design. Consistently maintained top grades while building side projects."
