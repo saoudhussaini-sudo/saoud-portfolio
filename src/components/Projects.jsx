@@ -1,7 +1,7 @@
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion'
 import { ExternalLink } from 'lucide-react'
 
-const ProjectCard = ({ title, tech, desc }) => {
+const ProjectCard = ({ title, tech, desc, link }) => {
   const x = useMotionValue(0);
   const y = useMotionValue(0);
 
@@ -61,10 +61,10 @@ const ProjectCard = ({ title, tech, desc }) => {
           ))}
         </div>
 
-        <div style={{ transform: "translateZ(40px)" }} className="mt-auto pt-4 border-t border-white/10 flex justify-between items-center text-white/70 hover:text-white transition-colors">
-          <span className="text-sm font-bold tracking-wide">View Live</span>
-          <ExternalLink size={16} />
-        </div>
+        <a href={link || '#'} target={link ? "_blank" : "_self"} rel="noopener noreferrer" style={{ transform: "translateZ(40px)" }} className="mt-auto pt-4 border-t border-white/10 flex justify-between items-center text-white/70 hover:text-white transition-colors z-10 pointer-events-auto">
+          <span className="text-sm font-bold tracking-wide">{link ? "View on GitHub" : "Coming Soon"}</span>
+          {link && <ExternalLink size={16} />}
+        </a>
       </motion.div>
     </div>
   )
@@ -76,7 +76,7 @@ export default function Projects() {
     { title: "Quantum Trade", desc: "High-frequency crypto trading algorithms dashboard with real-time WebGL charting.", tech: ["Three.js", "Node.js", "WebSockets"] },
     { title: "Neon Engine", desc: "A custom lightweight 3D rendering engine built completely from scratch for web browsers.", tech: ["WebGL", "JavaScript", "GLSL"] },
     { title: "Astro Social", desc: "Decentralized space-themed social network utilizing IPFS for secure, fast peer-to-peer data storage.", tech: ["Next.js", "Solidity", "IPFS"] },
-    { title: "Event Horizon", desc: "A black hole simulation interactive educational tool using physics equations and Raymarching.", tech: ["Three.js", "React Fiber", "Shaders"] },
+    { title: "Event Horizon", desc: "A black hole simulation interactive educational tool using physics equations and Raymarching.", tech: ["Three.js", "React Fiber", "Shaders"], link: "https://github.com/saoudhussaini-sudo/event-horizon" },
     { title: "Cyber Protocol", desc: "End-to-end encrypted messaging application with self-destructing data packets.", tech: ["React Native", "Express", "Crypto"] },
   ];
 
