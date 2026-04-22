@@ -1,6 +1,7 @@
 import { Canvas } from '@react-three/fiber'
 import { Suspense, useRef, useEffect, useState } from 'react'
 import { useScroll, useSpring } from 'framer-motion'
+import { Toaster } from 'react-hot-toast'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
@@ -62,6 +63,13 @@ export default function App() {
         </main>
         <Footer />
       </div>
+      <Toaster position="bottom-right" toastOptions={{
+        style: {
+          background: '#111',
+          color: '#fff',
+          border: '1px solid #333',
+        }
+      }}/>
     </div>
   )
 }

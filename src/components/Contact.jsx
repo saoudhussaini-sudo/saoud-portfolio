@@ -1,7 +1,47 @@
+import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Mail, Send } from 'lucide-react'
+import { Mail, Send, Loader2 } from 'lucide-react'
+import toast from 'react-hot-toast'
 
 export default function Contact() {
+  const [isSubmitting, setIsSubmitting] = useState(false)
+
+  const handleSubmit = async (event) => {
+    event.preventDefault()
+    setIsSubmitting(true)
+    
+    const formData = new FormData(event.target)
+    
+    // Append the access key for Web3Forms
+    formData.append("access_key", "ef3afee4-7cc6-4147-ac22-4c8bd72cddec")
+
+    const object = Object.fromEntries(formData)
+    const json = JSON.stringify(object)
+
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json"
+        },
+        body: json
+      })
+      
+      const resData = await res.json()
+      
+      if (resData.success) {
+        toast.success("Message sent successfully!")
+        event.target.reset()
+      } else {
+        toast.error("Failed to send message. Please try again.")
+      }
+    } catch (error) {
+      toast.error("An error occurred. Please try again.")
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
   return (
     <section id="contact" className="py-24 px-6 relative w-full z-10">
       <div className="max-w-4xl mx-auto glass-panel p-8 md:p-12 border-t-2 border-[#b026ff]/50 relative overflow-hidden">
@@ -43,21 +83,24 @@ export default function Contact() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             className="flex flex-col space-y-4"
-            onSubmit={(e) => { e.preventDefault(); alert("Thanks for the message! (Demo)"); }}
+            onSubmit={handleSubmit}
           >
             <input 
               type="text" 
+              name="name"
               placeholder="Your Name" 
               required
               className="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-[#00f0ff] transition-colors"
             />
             <input 
               type="email" 
+              name="email"
               placeholder="Your Email" 
               required
               className="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-[#b026ff] transition-colors"
             />
             <textarea 
+              name="message"
               rows="4" 
               placeholder="Your Message..." 
               required
@@ -66,10 +109,15 @@ export default function Contact() {
             
             <button 
               type="submit"
-              className="group w-full py-4 rounded-lg bg-gradient-to-r from-[#00f0ff] to-[#b026ff] text-black font-black text-lg flex items-center justify-center space-x-2 hover:opacity-90 transition-opacity"
+              disabled={isSubmitting}
+              className="group w-full py-4 rounded-lg bg-gradient-to-r from-[#00f0ff] to-[#b026ff] text-black font-black text-lg flex items-center justify-center space-x-2 hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              <span>Send Message</span>
-              <Send size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+              <span>{isSubmitting ? "Sending..." : "Send Message"}</span>
+              {isSubmitting ? (
+                <Loader2 size={18} className="animate-spin" />
+              ) : (
+                <Send size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+              )}
             </button>
           </motion.form>
 

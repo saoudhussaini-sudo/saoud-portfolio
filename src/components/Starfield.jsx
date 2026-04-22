@@ -1,5 +1,6 @@
 import { useRef, useMemo } from 'react'
 import { useFrame } from '@react-three/fiber'
+import { Sparkles, Stars } from '@react-three/drei'
 import * as THREE from 'three'
 
 export default function Starfield({ count = 2000 }) {
@@ -38,28 +39,39 @@ export default function Starfield({ count = 2000 }) {
   })
 
   return (
-    <points ref={pointsRef}>
-      <bufferGeometry>
-        <bufferAttribute
-          attach="attributes-position"
-          count={positions.length / 3}
-          array={positions}
-          itemSize={3}
+    <group>
+      {/* Original static/slow rotating starfield */}
+      <points ref={pointsRef}>
+        <bufferGeometry>
+          <bufferAttribute
+            attach="attributes-position"
+            count={positions.length / 3}
+            array={positions}
+            itemSize={3}
+          />
+          <bufferAttribute
+            attach="attributes-color"
+            count={colors.length / 3}
+            array={colors}
+            itemSize={3}
+          />
+        </bufferGeometry>
+        <pointsMaterial
+          size={0.08}
+          vertexColors
+          transparent
+          opacity={0.8}
+          sizeAttenuation={true}
         />
-        <bufferAttribute
-          attach="attributes-color"
-          count={colors.length / 3}
-          array={colors}
-          itemSize={3}
-        />
-      </bufferGeometry>
-      <pointsMaterial
-        size={0.08}
-        vertexColors
-        transparent
-        opacity={0.8}
-        sizeAttenuation={true}
-      />
-    </points>
+      </points>
+
+      {/* Dynamic drifting particles */}
+      <Sparkles count={300} scale={50} size={1.5} speed={0.4} opacity={0.6} color="#00f0ff" />
+      <Sparkles count={300} scale={50} size={1.5} speed={0.4} opacity={0.6} color="#b026ff" />
+      <Sparkles count={300} scale={50} size={2} speed={0.2} opacity={0.8} color="#ffffff" />
+      
+      {/* Distant moving stars */}
+      <Stars radius={50} depth={50} count={3000} factor={4} saturation={0} fade speed={2} />
+    </group>
   )
 }

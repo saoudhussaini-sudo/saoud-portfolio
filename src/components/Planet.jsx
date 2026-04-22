@@ -104,8 +104,11 @@ export default function Planet({ scrollY }) {
         {/* Orbiting Objects */}
         {/* Modified colors slightly to stand out against bright sun */}
         <OrbitingSkill radius={3.2} speed={1.2} color="#ff3333" label="Java" offset={0} />
+        <OrbitingSkill radius={3.6} speed={1.1} color="#68a063" label="Node.js" offset={1.5} />
         <OrbitingSkill radius={4.2} speed={0.9} color="#22aaff" label="Python" offset={2} />
+        <OrbitingSkill radius={4.6} speed={0.8} color="#e34c26" label="HTML" offset={3.5} />
         <OrbitingSkill radius={5.2} speed={0.6} color="#00ffcc" label="React" offset={4} />
+        <OrbitingSkill radius={5.8} speed={0.5} color="#0055ff" label="Framer" offset={5.5} />
       </group>
     </group>
   )
