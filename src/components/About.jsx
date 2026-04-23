@@ -30,13 +30,10 @@ export default function About() {
         
         <motion.div variants={itemVariants} className="glass-panel p-8 md:p-10 text-lg text-gray-300 leading-relaxed space-y-6">
           <p>
-            Hello! I'm Syed Saoud, a passionate Computer Science student and Full-Stack Developer. 
-            I specialize in building immersive web experiences that blend robust engineering with breathtaking design.
+            I’m a Computer Science student with a strong interest in building interactive, intelligent, and visually engaging digital experiences.
           </p>
           <p>
-            My journey in tech started with a curiosity for how things work behind the screen. 
-            Today, that curiosity has evolved into an obsession with creating high-performance applications, 
-            interactive 3D worlds, and seamless user interfaces.
+            I enjoy combining creativity with logic—whether it’s developing dynamic web applications, experimenting with simulations, or exploring the power of AI-driven systems.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 pt-8 border-t border-white/10">

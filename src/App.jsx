@@ -11,6 +11,7 @@ import Contact from './components/Contact'
 import Footer from './components/Footer'
 import Planet from './components/Planet'
 import Starfield from './components/Starfield'
+import MusicPlayer from './components/MusicPlayer'
 
 export default function App() {
   const [isClient, setIsClient] = useState(false);
@@ -53,6 +54,7 @@ export default function App() {
 
       {/* DOM Content (Foreground) */}
       <div className="relative z-10 w-full overflow-hidden">
+        <MusicPlayer />
         <Navbar />
         <main className="flex flex-col">
           <Hero />

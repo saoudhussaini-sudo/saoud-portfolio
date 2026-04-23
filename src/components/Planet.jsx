@@ -29,6 +29,22 @@ const OrbitingSkill = ({ radius, speed, color, label, offset = 0 }) => {
   )
 }
 
+const DecorativeParticle = ({ radius, speed, color, offset = 0, size = 0.05 }) => {
+  const ref = useRef()
+  useFrame((state) => {
+    const t = state.clock.elapsedTime * speed + offset
+    ref.current.position.x = Math.sin(t) * radius
+    ref.current.position.z = Math.cos(t) * radius
+    ref.current.position.y = Math.cos(t * 1.5) * (radius * 0.5)
+  })
+  return (
+    <mesh ref={ref}>
+      <sphereGeometry args={[size, 8, 8]} />
+      <meshStandardMaterial color={color} emissive={color} emissiveIntensity={2} transparent opacity={0.6} />
+    </mesh>
+  )
+}
+
 export default function Planet({ scrollY }) {
   const planetRef = useRef()
   const groupRef = useRef()
@@ -101,14 +117,25 @@ export default function Planet({ scrollY }) {
           <meshBasicMaterial color="#ffaa00" transparent opacity={0.15} blending={THREE.AdditiveBlending} />
         </Sphere>
 
-        {/* Orbiting Objects */}
-        {/* Modified colors slightly to stand out against bright sun */}
+        {/* Orbiting Skills */}
         <OrbitingSkill radius={3.2} speed={1.2} color="#ff3333" label="Java" offset={0} />
         <OrbitingSkill radius={3.6} speed={1.1} color="#68a063" label="Node.js" offset={1.5} />
-        <OrbitingSkill radius={4.2} speed={0.9} color="#22aaff" label="Python" offset={2} />
-        <OrbitingSkill radius={4.6} speed={0.8} color="#e34c26" label="HTML" offset={3.5} />
-        <OrbitingSkill radius={5.2} speed={0.6} color="#00ffcc" label="React" offset={4} />
-        <OrbitingSkill radius={5.8} speed={0.5} color="#0055ff" label="Framer" offset={5.5} />
+        <OrbitingSkill radius={4.0} speed={1.0} color="#00f0ff" label="Three.js" offset={0.5} />
+        <OrbitingSkill radius={4.4} speed={0.9} color="#22aaff" label="Python" offset={2} />
+        <OrbitingSkill radius={4.8} speed={0.8} color="#e34c26" label="HTML" offset={3.5} />
+        <OrbitingSkill radius={5.2} speed={0.7} color="#38bdf8" label="Tailwind" offset={1.0} />
+        <OrbitingSkill radius={5.6} speed={0.6} color="#00ffcc" label="React" offset={4} />
+        <OrbitingSkill radius={6.0} speed={0.5} color="#0055ff" label="Framer" offset={5.5} />
+        <OrbitingSkill radius={6.4} speed={0.4} color="#f7df1e" label="JS" offset={2.5} />
+
+        {/* Pure Decorative Particles for extra visual density */}
+        <DecorativeParticle radius={3.0} speed={1.5} color="#ffaa00" offset={0} />
+        <DecorativeParticle radius={3.5} speed={-1.2} color="#ffffff" offset={2} />
+        <DecorativeParticle radius={4.0} speed={1.8} color="#ff4400" offset={4} />
+        <DecorativeParticle radius={4.5} speed={-0.8} color="#00f0ff" offset={1} />
+        <DecorativeParticle radius={5.0} speed={1.1} color="#ffcc00" offset={3} />
+        <DecorativeParticle radius={5.5} speed={-1.5} color="#b026ff" offset={5} />
+        <DecorativeParticle radius={6.0} speed={0.7} color="#ffffff" offset={0.5} />
       </group>
     </group>
   )

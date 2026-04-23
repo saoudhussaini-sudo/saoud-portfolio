@@ -32,22 +32,22 @@ const TimelineItem = ({ year, title, subtitle, description, isLeft }) => {
 export default function Experience() {
   const experiences = [
     {
-      year: "2024 - Present",
-      title: "Senior Full-Stack Intern",
-      subtitle: "Tech Innovators Inc.",
-      description: "Developed and optimized microservices in Python and Node.js. Built scalable React frontends, improving loading times by 40% and user engagement significantly."
+      year: "Phase 01",
+      title: "Discovering Tech",
+      subtitle: "The Beginning",
+      description: "My journey started with curiosity about how digital systems work, which led me into the world of coding."
     },
     {
-      year: "2022 - 2024",
-      title: "Computer Science Degree",
-      subtitle: "University of Technology",
-      description: "Focusing on Software Engineering, Data Structures, Algorithms, and UI/UX design. Consistently maintained top grades while building side projects."
+      year: "Phase 02",
+      title: "Creating Projects",
+      subtitle: "Learning by Doing",
+      description: "I turned that curiosity into action by building interactive projects, experimenting with ideas, and learning by doing."
     },
     {
-      year: "2021 - 2022",
-      title: "Freelance Web Developer",
-      subtitle: "Self-Employed",
-      description: "Created landing pages and e-commerce websites for local businesses using React and Tailwind CSS, establishing a foundational client base and refining UI skills."
+      year: "Phase 03",
+      title: "Pushing Boundaries",
+      subtitle: "The Vision",
+      description: "Today, I focus on developing advanced, impactful solutions—combining creativity with technology to build meaningful experiences."
     }
   ]
 
