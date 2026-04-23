@@ -3,9 +3,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Play, Pause, Volume2, VolumeX, SkipForward, SkipBack } from 'lucide-react';
 
 export const tracks = [
-  { title: "Ethereal Journey", src: "/portfolio/music/muc1.mp3" },
-  { title: "Cyber Pulse", src: "/portfolio/music/muc2.mp3" },
-  { title: "Midnight Neon", src: "/portfolio/music/muc3.mp3" }
+  { title: "Ethereal Journey", src: "/saoud-portfolio/music/muc1.mp3" },
+  { title: "Cyber Pulse", src: "/saoud-portfolio/music/muc2.mp3" },
+  { title: "Midnight Neon", src: "/saoud-portfolio/music/muc3.mp3" }
 ];
 
 export default function MusicPlayer() {
