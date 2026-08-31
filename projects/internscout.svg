@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f19"/>
+      <stop offset="100%" stop-color="#06080e"/>
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="100%" height="100%" fill="url(#bg4)"/>
+
+  <!-- Radar Cones & Semantic Vectors -->
+  <g transform="translate(600, 360)">
+    <!-- Concentric radar circles -->
+    <circle r="260" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1.5"/>
+    <circle r="190" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1.5"/>
+    <circle r="120" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1.5"/>
+    <circle r="50" fill="none" stroke="#06b6d4" stroke-width="2" opacity="0.6"/>
+
+    <!-- Crosshairs -->
+    <line x1="-300" y1="0" x2="300" y2="0" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+    <line x1="0" y1="-300" x2="0" y2="300" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+
+    <!-- Radar Sweep Sector -->
+    <path d="M 0 0 L 220 -130 A 260 260 0 0 0 0 -260 Z" fill="url(#cyanGrad)" opacity="0.15"/>
+
+    <!-- Opportunity Nodes (Matched listings) -->
+    <!-- High Match Node 1 -->
+    <g transform="translate(140, -110)">
+      <circle r="8" fill="#06b6d4"/>
+      <circle r="16" fill="none" stroke="#06b6d4" stroke-width="1.5" opacity="0.6"/>
+      <rect x="20" y="-18" width="180" height="42" rx="6" fill="#151d2f" stroke="rgba(6,182,212,0.4)"/>
+      <text x="32" y="0" fill="#ffffff" font-family="system-ui, sans-serif" font-size="11" font-weight="700">AI Platform Eng • 98%</text>
+      <text x="32" y="16" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Python / Next.js / Vector DB</text>
+    </g>
+
+    <!-- Match Node 2 -->
+    <g transform="translate(-160, -90)">
+      <circle r="6" fill="#3b82f6"/>
+      <rect x="-190" y="-18" width="175" height="42" rx="6" fill="#151d2f" stroke="rgba(255,255,255,0.1)"/>
+      <text x="-178" y="0" fill="#ffffff" font-family="system-ui, sans-serif" font-size="11" font-weight="700">Full-Stack Fellow • 94%</text>
+      <text x="-178" y="16" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">React / TypeScript / APIs</text>
+    </g>
+
+    <!-- Match Node 3 -->
+    <g transform="translate(80, 150)">
+      <circle r="6" fill="#10b981"/>
+      <rect x="20" y="-18" width="180" height="42" rx="6" fill="#151d2f" stroke="rgba(255,255,255,0.1)"/>
+      <text x="32" y="0" fill="#ffffff" font-family="system-ui, sans-serif" font-size="11" font-weight="700">Automation Intern • 91%</text>
+      <text x="32" y="16" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Python / FastAPI / Scrapers</text>
+    </g>
+
+    <!-- Match Node 4 -->
+    <g transform="translate(-120, 120)">
+      <circle r="5" fill="#f59e0b"/>
+    </g>
+  </g>
+
+  <!-- Technical Meta -->
+  <text x="60" y="70" fill="rgba(255,255,255,0.4)" font-family="monospace" font-size="12" letter-spacing="3">VECTOR SEARCH // OPPORTUNITY ENGINE</text>
+  <text x="1140" y="70" text-anchor="end" fill="rgba(255,255,255,0.4)" font-family="monospace" font-size="12">COSINE SIMILARITY: >0.90</text>
+  <text x="60" y="700" fill="#ffffff" font-family="system-ui, sans-serif" font-size="28" font-weight="800" letter-spacing="1">INTERNSCOUT TALENT ENGINE</text>
+  <text x="1140" y="700" text-anchor="end" fill="rgba(255,255,255,0.6)" font-family="system-ui, sans-serif" font-size="14">NEXT.JS 14 • TYPESCRIPT • PYTHON</text>
+</svg>

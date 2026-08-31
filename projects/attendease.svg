@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c0d10"/>
+      <stop offset="60%" stop-color="#111318"/>
+      <stop offset="100%" stop-color="#08090b"/>
+    </linearGradient>
+    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="100%" height="100%" fill="url(#bg2)"/>
+
+  <!-- UI Window Container -->
+  <g transform="translate(180, 90)">
+    <!-- Browser window chrome -->
+    <rect width="840" height="540" rx="16" fill="#15171e" stroke="rgba(255,255,255,0.1)" stroke-width="1.5"/>
+    <rect width="840" height="48" rx="16" fill="#1b1e27"/>
+    <circle cx="28" cy="24" r="6" fill="#ef4444"/>
+    <circle cx="48" cy="24" r="6" fill="#f59e0b"/>
+    <circle cx="68" cy="24" r="6" fill="#10b981"/>
+    <rect x="240" y="12" width="360" height="24" rx="6" fill="#111318"/>
+    <text x="420" y="28" fill="rgba(255,255,255,0.4)" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">attendease.internal/dashboard</text>
+
+    <!-- Sidebar -->
+    <rect x="0" y="48" width="180" height="492" fill="#12141a"/>
+    <rect x="20" y="80" width="140" height="32" rx="6" fill="#10B981" opacity="0.15"/>
+    <text x="50" y="100" fill="#10B981" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Overview</text>
+    <rect x="20" y="125" width="140" height="30" rx="6" fill="transparent"/>
+    <text x="50" y="145" fill="rgba(255,255,255,0.4)" font-family="system-ui, sans-serif" font-size="12">Departments</text>
+    <rect x="20" y="165" width="140" height="30" rx="6" fill="transparent"/>
+    <text x="50" y="185" fill="rgba(255,255,255,0.4)" font-family="system-ui, sans-serif" font-size="12">Live Scanner</text>
+    <rect x="20" y="205" width="140" height="30" rx="6" fill="transparent"/>
+    <text x="50" y="225" fill="rgba(255,255,255,0.4)" font-family="system-ui, sans-serif" font-size="12">Audit Logs</text>
+
+    <!-- Main Content Area -->
+    <!-- Metric Cards -->
+    <g transform="translate(210, 75)">
+      <rect width="185" height="90" rx="10" fill="#1a1d26" stroke="rgba(255,255,255,0.06)"/>
+      <text x="18" y="32" fill="rgba(255,255,255,0.4)" font-family="system-ui, sans-serif" font-size="11" font-weight="600">CHECK-IN RATE</text>
+      <text x="18" y="68" fill="#ffffff" font-family="system-ui, sans-serif" font-size="26" font-weight="800">98.4%</text>
+
+      <rect x="205" width="185" height="90" rx="10" fill="#1a1d26" stroke="rgba(255,255,255,0.06)"/>
+      <text x="223" y="32" fill="rgba(255,255,255,0.4)" font-family="system-ui, sans-serif" font-size="11" font-weight="600">AVG VERIFY TIME</text>
+      <text x="223" y="68" fill="#10B981" font-family="system-ui, sans-serif" font-size="26" font-weight="800">0.8s</text>
+
+      <rect x="410" width="185" height="90" rx="10" fill="#1a1d26" stroke="rgba(255,255,255,0.06)"/>
+      <text x="428" y="32" fill="rgba(255,255,255,0.4)" font-family="system-ui, sans-serif" font-size="11" font-weight="600">TOTAL MEMBERS</text>
+      <text x="428" y="68" fill="#ffffff" font-family="system-ui, sans-serif" font-size="26" font-weight="800">1,248</text>
+    </g>
+
+    <!-- Chart / Activity Bar graph -->
+    <g transform="translate(210, 190)">
+      <rect width="595" height="310" rx="10" fill="#1a1d26" stroke="rgba(255,255,255,0.06)"/>
+      <text x="25" y="35" fill="#ffffff" font-family="system-ui, sans-serif" font-size="14" font-weight="700">Real-time Check-in Frequency (Today)</text>
+      
+      <!-- Bars -->
+      <g transform="translate(30, 260) scale(1, -1)">
+        <rect x="30" y="0" width="35" height="40" rx="4" fill="rgba(255,255,255,0.1)"/>
+        <rect x="85" y="0" width="35" height="85" rx="4" fill="rgba(255,255,255,0.15)"/>
+        <rect x="140" y="0" width="35" height="190" rx="4" fill="url(#emeraldGrad)"/>
+        <rect x="195" y="0" width="35" height="160" rx="4" fill="url(#emeraldGrad)"/>
+        <rect x="250" y="0" width="35" height="90" rx="4" fill="rgba(255,255,255,0.15)"/>
+        <rect x="305" y="0" width="35" height="130" rx="4" fill="url(#emeraldGrad)"/>
+        <rect x="360" y="0" width="35" height="175" rx="4" fill="url(#emeraldGrad)"/>
+        <rect x="415" y="0" width="35" height="70" rx="4" fill="rgba(255,255,255,0.1)"/>
+        <rect x="470" y="0" width="35" height="30" rx="4" fill="rgba(255,255,255,0.05)"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- Metadata -->
+  <text x="60" y="70" fill="rgba(255,255,255,0.4)" font-family="monospace" font-size="12" letter-spacing="3">CASE // INSTITUTIONAL PLATFORM</text>
+  <text x="60" y="700" fill="#ffffff" font-family="system-ui, sans-serif" font-size="28" font-weight="800" letter-spacing="1">ATTENDEASE MANAGEMENT</text>
+  <text x="1140" y="700" text-anchor="end" fill="rgba(255,255,255,0.6)" font-family="system-ui, sans-serif" font-size="14">REACT 19 • NODE.JS • POSTGRESQL</text>
+</svg>
