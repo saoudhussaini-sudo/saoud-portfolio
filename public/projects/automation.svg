@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f11"/>
+      <stop offset="50%" stop-color="#141418"/>
+      <stop offset="100%" stop-color="#09090b"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  
+  <rect width="100%" height="100%" fill="url(#bg)"/>
+  <rect width="100%" height="100%" fill="url(#grid)"/>
+  
+  <!-- Subtle decorative ambient glow -->
+  <circle cx="600" cy="375" r="300" fill="#8B5CF6" opacity="0.08" filter="blur(60px)"/>
+  
+  <!-- Orchestration Nodes & Connections -->
+  <g transform="translate(150, 120)">
+    <!-- Connection lines -->
+    <path d="M 150 250 L 380 150 L 620 250 L 850 150" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="2" stroke-dasharray="6,6"/>
+    <path d="M 380 150 L 380 350 L 620 250" fill="none" stroke="url(#accent)" stroke-width="2.5"/>
+    <path d="M 150 250 L 380 350 L 850 350" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
+
+    <!-- Node 1 -->
+    <g transform="translate(150, 250)">
+      <rect x="-70" y="-35" width="140" height="70" rx="8" fill="#18181b" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
+      <circle cx="-40" cy="0" r="5" fill="#10B981"/>
+      <text x="-25" y="5" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="600">TRIGGER: API</text>
+    </g>
+
+    <!-- Node 2 (LLM Prompt Node) -->
+    <g transform="translate(380, 150)">
+      <rect x="-85" y="-40" width="170" height="80" rx="8" fill="#1e1b4b" stroke="#8B5CF6" stroke-width="2"/>
+      <circle cx="-55" cy="-10" r="6" fill="#8B5CF6"/>
+      <text x="-40" y="-6" fill="#ffffff" font-family="system-ui, sans-serif" font-size="14" font-weight="700">LLM PARSER</text>
+      <text x="-55" y="18" fill="#a1a1aa" font-family="system-ui, sans-serif" font-size="11">Extract JSON Schema</text>
+    </g>
+
+    <!-- Node 3 (Queue Worker) -->
+    <g transform="translate(380, 350)">
+      <rect x="-75" y="-35" width="150" height="70" rx="8" fill="#18181b" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
+      <circle cx="-45" cy="0" r="5" fill="#F59E0B"/>
+      <text x="-30" y="5" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="600">REDIS QUEUE</text>
+    </g>
+
+    <!-- Node 4 (Transformer Node) -->
+    <g transform="translate(620, 250)">
+      <rect x="-85" y="-40" width="170" height="80" rx="8" fill="#18181b" stroke="#3B82F6" stroke-width="2"/>
+      <circle cx="-55" cy="-10" r="6" fill="#3B82F6"/>
+      <text x="-40" y="-6" fill="#ffffff" font-family="system-ui, sans-serif" font-size="14" font-weight="700">DAG RUNNER</text>
+      <text x="-55" y="18" fill="#a1a1aa" font-family="system-ui, sans-serif" font-size="11">Parallel Step Execution</text>
+    </g>
+
+    <!-- Node 5 (Output Node) -->
+    <g transform="translate(850, 150)">
+      <rect x="-70" y="-35" width="140" height="70" rx="8" fill="#18181b" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
+      <circle cx="-40" cy="0" r="5" fill="#10B981"/>
+      <text x="-25" y="5" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="600">DISPATCH</text>
+    </g>
+  </g>
+
+  <!-- Title & Minimal Metadata in corners -->
+  <text x="60" y="70" fill="rgba(255,255,255,0.4)" font-family="monospace" font-size="12" letter-spacing="3">SYS.ARCH // AUTONOMOUS DAG ENGINE</text>
+  <text x="1140" y="70" text-anchor="end" fill="rgba(255,255,255,0.4)" font-family="monospace" font-size="12">STATUS: OPTIMAL</text>
+  <text x="60" y="700" fill="#ffffff" font-family="system-ui, sans-serif" font-size="28" font-weight="800" letter-spacing="1">AI AUTOMATION PLATFORM</text>
+  <text x="1140" y="700" text-anchor="end" fill="rgba(255,255,255,0.6)" font-family="system-ui, sans-serif" font-size="14">v2.4.0 • PYTHON / FASTAPI / REACT</text>
+</svg>

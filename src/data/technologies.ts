@@ -1,0 +1,138 @@
+export interface TechnologyItem {
+  id: string;
+  name: string;
+  category: "Language" | "Frontend" | "Backend & Data" | "Tools & AI";
+  level: string;
+  tagline: string;
+  accent: string;
+  featured: boolean;
+}
+
+export const technologiesData: TechnologyItem[] = [
+  {
+    id: "python",
+    name: "Python",
+    category: "Language",
+    level: "Core Strength",
+    tagline: "Backend development, automation scripts, data extraction & AI orchestration",
+    accent: "#3776AB",
+    featured: true,
+  },
+  {
+    id: "javascript",
+    name: "JavaScript",
+    category: "Language",
+    level: "Proficient",
+    tagline: "Dynamic interactions, event loops, modern ESNext asynchronous patterns",
+    accent: "#F7DF1E",
+    featured: true,
+  },
+  {
+    id: "typescript",
+    name: "TypeScript",
+    category: "Language",
+    level: "Core Strength",
+    tagline: "Strict type safety, generic design, robust interface contracts across stacks",
+    accent: "#3178C6",
+    featured: true,
+  },
+  {
+    id: "react",
+    name: "React",
+    category: "Frontend",
+    level: "Core Strength",
+    tagline: "Component lifecycle, custom hooks, Framer Motion choreography & modern UI state",
+    accent: "#61DAFB",
+    featured: true,
+  },
+  {
+    id: "nextjs",
+    name: "Next.js",
+    category: "Frontend",
+    level: "Proficient",
+    tagline: "Server-side rendering, App Router architecture, optimized edge deployments",
+    accent: "#000000",
+    featured: true,
+  },
+  {
+    id: "html",
+    name: "HTML",
+    category: "Frontend",
+    level: "Core Strength",
+    tagline: "Semantic markup, strict accessibility standards, SEO structured architecture",
+    accent: "#E34F26",
+    featured: false,
+  },
+  {
+    id: "css",
+    name: "CSS",
+    category: "Frontend",
+    level: "Core Strength",
+    tagline: "Fluid clamp layouts, custom properties, modern grid & smooth transitions",
+    accent: "#1572B6",
+    featured: false,
+  },
+  {
+    id: "tailwind",
+    name: "Tailwind CSS",
+    category: "Frontend",
+    level: "Core Strength",
+    tagline: "Utility-first design tokens, responsive typography, micro-interactions",
+    accent: "#06B6D4",
+    featured: true,
+  },
+  {
+    id: "git",
+    name: "Git",
+    category: "Tools & AI",
+    level: "Core Strength",
+    tagline: "Distributed version control, branching workflows, clean commit history",
+    accent: "#F05032",
+    featured: false,
+  },
+  {
+    id: "github",
+    name: "GitHub",
+    category: "Tools & AI",
+    level: "Core Strength",
+    tagline: "CI/CD actions, open-source collaboration, project management & releases",
+    accent: "#181717",
+    featured: true,
+  },
+  {
+    id: "rest-apis",
+    name: "REST APIs",
+    category: "Backend & Data",
+    level: "Core Strength",
+    tagline: "Clean endpoint architecture, rate limiting, token auth & robust JSON schemas",
+    accent: "#FF6C37",
+    featured: true,
+  },
+  {
+    id: "sql",
+    name: "SQL",
+    category: "Backend & Data",
+    level: "Proficient",
+    tagline: "Relational database schemas, PostgreSQL, indexing, query optimization",
+    accent: "#336791",
+    featured: true,
+  },
+  {
+    id: "automation",
+    name: "Automation",
+    category: "Tools & AI",
+    level: "Core Strength",
+    tagline: "Headless crawlers, cron daemons, batch pipelines & workflow optimization",
+    accent: "#10B981",
+    featured: true,
+  },
+  {
+    id: "ai-llm",
+    name: "AI / LLM APIs",
+    category: "Tools & AI",
+    level: "Core Strength",
+    tagline: "Function calling, prompt engineering, embeddings, autonomous agent pipelines",
+    accent: "#8B5CF6",
+    featured: true,
+  },
+];

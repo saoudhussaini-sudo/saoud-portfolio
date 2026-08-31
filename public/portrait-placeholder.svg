@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="100%" height="100%">
+  <defs>
+    <linearGradient id="pbg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#141416"/>
+      <stop offset="40%" stop-color="#1a1a1e"/>
+      <stop offset="100%" stop-color="#0a0a0c"/>
+    </linearGradient>
+    <radialGradient id="meshGlow" cx="50%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="#2a2b36"/>
+      <stop offset="60%" stop-color="#15161a"/>
+      <stop offset="100%" stop-color="#09090b"/>
+    </radialGradient>
+    <linearGradient id="goldStroke" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.4)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0.05)"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="100%" height="100%" fill="url(#pbg)"/>
+  <rect width="100%" height="100%" fill="url(#meshGlow)"/>
+
+  <!-- Subtle geometric portrait grid -->
+  <circle cx="400" cy="420" r="260" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1.5"/>
+  <circle cx="400" cy="420" r="180" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1.5"/>
+  <circle cx="400" cy="420" r="100" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1.5"/>
+
+  <!-- Stylized Geometric Monogram / Emblem -->
+  <g transform="translate(400, 420)">
+    <!-- Outer diamond -->
+    <rect x="-90" y="-90" width="180" height="180" rx="20" fill="#181920" stroke="url(#goldStroke)" stroke-width="2" transform="rotate(45)"/>
+    
+    <!-- Editorial Monogram -->
+    <text x="0" y="24" fill="#f4f4f2" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="76" font-weight="900" text-anchor="middle" letter-spacing="4">SSH</text>
+  </g>
+
+  <!-- Typography & Editorial Framing -->
+  <text x="60" y="80" fill="rgba(255,255,255,0.4)" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="14" font-weight="600" letter-spacing="3">PORTRAIT // SYED SAOUD</text>
+  <text x="740" y="80" text-anchor="end" fill="rgba(255,255,255,0.4)" font-family="monospace" font-size="13">HYDERABAD, IN</text>
+
+  <line x1="60" y1="100" x2="740" y2="100" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+
+  <text x="400" y="780" text-anchor="middle" fill="#ffffff" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="20" font-weight="800" letter-spacing="2">SYED SAOUD ULLAH HUSSAINI</text>
+  <text x="400" y="815" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="13" font-weight="500" letter-spacing="3">SOFTWARE DEVELOPER & BUILDER</text>
+
+  <line x1="60" y1="870" x2="740" y2="870" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <text x="60" y="910" fill="rgba(255,255,255,0.3)" font-family="monospace" font-size="11" letter-spacing="2">DEV.ID // 041410-HYD</text>
+  <text x="740" y="910" text-anchor="end" fill="rgba(255,255,255,0.3)" font-family="monospace" font-size="11">©2026</text>
+</svg>
